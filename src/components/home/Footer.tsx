@@ -1,6 +1,13 @@
 import React from "react";
 import Link from "next/link";
-import { FaFacebook, FaTwitter, FaGoogle } from "react-icons/fa";
+
+import {
+  FaFacebook,
+  FaTwitter,
+  FaGoogle,
+  FaPhone,
+  FaEnvelope,
+} from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -15,11 +22,17 @@ export default function Footer() {
               <div>
                 <h4 className="text-orange-500 font-medium mb-2">USA Office</h4>
                 <p className="text-gray-300">Phone: 925-238-1915</p>
-                <p className="text-gray-300">470 Harvest Park Dr, Suite E, Brentwood, CA 94513</p>
+                <p className="text-gray-300">
+                  470 Harvest Park Dr, Suite E, Brentwood, CA 94513
+                </p>
               </div>
               <div>
-                <h4 className="text-orange-500 font-medium mb-2">Bangladesh Office</h4>
-                <p className="text-gray-300">City Center, Suite 26-D1 Plot 5/A, Motijheel</p>
+                <h4 className="text-orange-500 font-medium mb-2">
+                  Bangladesh Office
+                </h4>
+                <p className="text-gray-300">
+                  City Center, Suite 26-D1 Plot 5/A, Motijheel
+                </p>
                 <p className="text-gray-300">C/A Dhaka 1000, Bangladesh</p>
               </div>
             </div>
@@ -29,16 +42,16 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-semibold mb-4">List Of Services</h3>
             <ul className="space-y-2 text-gray-300">
-              <li className="hover:text-orange-500 transition-colors">
+              <li className="hover:text-green-600 transition-colors">
                 <Link href="#">Web Design & Development</Link>
               </li>
-              <li className="hover:text-orange-500 transition-colors">
+              <li className="hover:text-green-600 transition-colors">
                 <Link href="#">E-Commerce</Link>
               </li>
-              <li className="hover:text-orange-500 transition-colors">
+              <li className="hover:text-green-600 transition-colors">
                 <Link href="#">Online Marketing</Link>
               </li>
-              <li className="hover:text-orange-500 transition-colors">
+              <li className="hover:text-green-600 transition-colors">
                 <Link href="#">Domain Registration & Hosting</Link>
               </li>
             </ul>
@@ -48,13 +61,13 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-semibold mb-4">Support</h3>
             <ul className="space-y-2 text-gray-300">
-              <li className="hover:text-orange-500 transition-colors">
+              <li className="hover:text-green-600 transition-colors">
                 <Link href="#">Documentation</Link>
               </li>
-              <li className="hover:text-orange-500 transition-colors">
+              <li className="hover:text-green-600 transition-colors">
                 <Link href="#">Privacy Policy</Link>
               </li>
-              <li className="hover:text-orange-500 transition-colors">
+              <li className="hover:text-green-600 transition-colors">
                 <Link href="#">Terms of Service</Link>
               </li>
             </ul>
@@ -64,39 +77,58 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-semibold mb-4">Extra Links</h3>
             <ul className="space-y-2 text-gray-300">
-              <li className="hover:text-orange-500 transition-colors">
+              <li className="hover:text-green-600 transition-colors">
                 <Link href="#">Element Search</Link>
               </li>
-              <li className="hover:text-orange-500 transition-colors">
+              <li className="hover:text-green-600 transition-colors">
                 <Link href="#">Pumps and Instrumentations</Link>
               </li>
             </ul>
           </div>
         </div>
 
-        {/* Social Media & Copyright */}
+        {/* Contact & Social Media */}
         <div className="mt-12 pt-8 border-t border-gray-800">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="flex items-center space-x-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+            {/* Quick Contact */}
+            <div className="flex items-center space-x-6">
+              <a
+                href="tel:925-238-1915"
+                className="flex items-center space-x-2 text-gray-400 hover:text-green-600 transition-colors"
+              >
+                <FaPhone size={16} />
+                <span>925-238-1915</span>
+              </a>
+              <a
+                href="mailto:contact@wempro.com"
+                className="flex items-center space-x-2 text-gray-400 hover:text-green-600 transition-colors"
+              >
+                <FaEnvelope size={16} />
+                <span>contact@wempro.com</span>
+              </a>
+            </div>
+
+            {/* Social Media */}
+            <div className="flex items-center space-x-6">
               <span className="text-gray-400">Connect with us</span>
               <div className="flex space-x-4">
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-orange-500 transition-colors"
+                  className="text-gray-400 hover:text-green-600 transition-colors"
                   aria-label="Facebook"
                 >
-                  <FaFacebook size={20} />
+                  <FaFacebook size={24} />
                 </a>
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-orange-500 transition-colors"
+                  className="text-gray-400 hover:text-green-600 transition-colors"
                   aria-label="Twitter"
                 >
-                  <FaTwitter size={20} />
+                  <FaTwitter size={24} />
                 </a>
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-orange-500 transition-colors"
+                  className="text-gray-400 hover:text-green-600 transition-colors"
                   aria-label="Google"
                 >
                   <FaGoogle size={20} />
@@ -105,8 +137,8 @@ export default function Footer() {
             </div>
             <div className="text-gray-400 text-sm text-center md:text-right">
               <p>
-                Copyright © {new Date().getFullYear()} by Elementsearch Company - All rights
-                reserved | Design by{" "}
+                Copyright © {new Date().getFullYear()} by Elementsearch Company
+                - All rights reserved | Design by{" "}
                 <a
                   href="#"
                   className="text-orange-500 hover:text-orange-400 transition-colors"
